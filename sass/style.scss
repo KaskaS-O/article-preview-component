@@ -2,7 +2,38 @@
 @import 'variables';
 @import 'base';
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+
+    width: 86%;
+    height: 500px;
+    margin: calc((100vh - 500px) /2) auto;
+    overflow: hidden;
+}
+
+.image {
+    background-image: url(../images/drawers.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.article {
+    
+}
+
+.socials {
+    display: none;
+}
 
 
-.attribution { font-size: 11px; text-align: center; }
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+}
