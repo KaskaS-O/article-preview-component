@@ -11,6 +11,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  background-color: #ecf2f8;
   font-size: 10px;
   font-family: 'Manrope', sans-serif;
 }
@@ -24,14 +25,101 @@ body {
       grid-template-rows: 2fr 3fr;
   width: 86%;
   height: 500px;
+  border-radius: 8px;
   margin: calc((100vh - 500px) /2) auto;
   overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 30px -20px #9eafc2;
+          box-shadow: 0 10px 30px -20px #9eafc2;
 }
 
 .image {
   background-image: url(../images/drawers.jpg);
   background-size: cover;
   background-position: left;
+}
+
+.article {
+  padding: 12% 10% 5%;
+  line-height: 1.5;
+}
+
+.article__title {
+  color: #48556a;
+  font-size: 1.6em;
+}
+
+.article__txt {
+  padding: 5% 0 10%;
+  color: #6d7f97;
+  font-size: 1.3em;
+}
+
+.author {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author__avatar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/3/2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author__name {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+  padding-left: 15px;
+  color: #48556a;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.author__date {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2/2/3/3;
+  padding-left: 15px;
+  color: #9eafc2;
+  font-size: 1.3em;
+}
+
+.author__share {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1/3/3/4;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+}
+
+.author__share img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .socials {
@@ -43,13 +131,15 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  padding-bottom: 5px;
 }
 
 footer .attribution {
+  color: #6d7f97;
   font-size: 11px;
   text-align: center;
 }
 
 footer .attribution a {
-  color: #3e52a3;
+  color: #48556a;
 }

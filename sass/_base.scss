@@ -1,9 +1,12 @@
+@import 'variables';
+
 body {
     position: absolute;
     top:0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    background-color: $white;
 
     font-size: 10px;
     font-family: 'Manrope', sans-serif;
